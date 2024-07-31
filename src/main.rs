@@ -33,7 +33,7 @@ fn main() {
 
     print!("  number of steps = ");
     io::stdout().flush().unwrap();
-    let num_steps: i32 = read_input();
+    let num_steps: i32 = read_input() as i32;
 
     println!();
 
@@ -84,7 +84,7 @@ fn main() {
 }
 
 // Function to read and parse user input.
-fn read_input<T: std::str::FromStr>() -> T {
+fn read_input() -> f64 {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
     input.trim().parse().ok().expect("Invalid input")
